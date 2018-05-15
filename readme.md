@@ -2,9 +2,18 @@
 
 ### Directory
 
-`nginx` nginx image dir;
-`admin` admin module codebase;
-`api` api module codebase;
+- `nginx` nginx image dir;
+- `admin` admin module codebase;
+- `api` api module codebase;
+
+### Images
+- `nginx`
+
+### Services
+- `proxy_service`
+- `api_service`
+- `admin_service`
+
 
 ### Networks
 
@@ -19,3 +28,5 @@
 - enable logging.
 - optimize image dir and docker configs, code dirs.
 - optimize laravel default dir. 
+- enable schedule server.
+- add mysql,redis,queue and setup the `db_net`.
