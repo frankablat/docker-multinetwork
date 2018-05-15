@@ -2,26 +2,29 @@ version: '3'
 
 networks:
   proxy_net:
-  web_net:
-
-volumes:
-  code1:
-  code3:
 
 services:
   proxy_service:
-    image: nginx:latest
+    build: ./nginx
     networks:
       proxy_net:
-    expose:
+    ports:
       - "80:80"
+    volumes:
+      - ./nginx/proxy:/etc/nginx/conf.d
 
   api_service:
-    image: nginx:latest
+    build: ./nginx
     networks:
       proxy_net:
+    volumes:
+      - ./nginx/api:/etc/nginx/conf.d
+      - ./api:/var/www/
 
-  test_service:
-    image: nginx:latest
+  admin_service:
+    build: ./nginx
     networks:
-      web_net:
+      proxy_net:
+    volumes:
+      - ./nginx/admin:/etc/nginx/conf.d
+      - ./admin:/var/www
