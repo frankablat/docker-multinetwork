@@ -1,0 +1,27 @@
+version: '3'
+
+networks:
+  proxy_net:
+  web_net:
+
+volumes:
+  code1:
+  code3:
+
+services:
+  proxy_service:
+    image: nginx:latest
+    networks:
+      proxy_net:
+    expose:
+      - "80:80"
+
+  api_service:
+    image: nginx:latest
+    networks:
+      proxy_net:
+
+  test_service:
+    image: nginx:latest
+    networks:
+      web_net:
