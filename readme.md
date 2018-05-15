@@ -1,5 +1,20 @@
 # Docker Dev Env
 
+### Requirements
+
+Software:
+- `linux` : Docker.
+- `Mac`:Docker.
+- `Windoews` Docker,makefile.
+
+*Port`80` needs to be freed.*
+### Start Server
+After preparation just run the following command:
+```shell
+make setup
+
+```
+Then open 
 ### Directory
 
 - `nginx` nginx image dir;
