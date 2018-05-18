@@ -1,11 +1,24 @@
-# Docker Dev Env
+# Docker Setup
 
 ### Requirements
 
 Software:
-- `linux` : Docker.
-- `Mac`:Docker.
-- `Windoews` Docker,makefile.
+> Click the link below to download or run command
+
+- `linux` : [Docker](https://store.docker.com/editions/community/docker-ce-server-ubuntu)
+
+```bash
+ #Ubuntu
+ apt-get install docker
+ 
+ # CentOS
+ # yum install docker
+```
+- `Mac`: [Docker](https://store.docker.com/editions/community/docker-ce-desktop-mac) or 
+```bash
+ brew install docker
+```
+- `Windoews` [Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
 *Port`80` needs to be freed.*
 ### Start Server
